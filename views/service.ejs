@@ -1,0 +1,13 @@
+<%- include("header"); -%>
+  <h1>Services</h1>
+  <p><%= serviceContent %></p>
+
+
+
+  <%  resources.forEach(function(resource){ %>
+
+  <h1><%=resource.name%></h1>
+  <p><%=resource.info%></p>
+  <p><%=resource.person%></p>
+  <p><%=resource.descriptor%></p>
+  <% }) %>

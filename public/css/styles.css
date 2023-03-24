@@ -1,0 +1,49 @@
+.container-fluid {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    font-family: 'Times New Roman', serif;
+}
+
+body{
+  background-color: #E8E8E8;
+  font-family: 'Times New Roman', serif;
+}
+h1{
+  font-family: 'Times New Roman', serif;
+}
+h2{
+  font-family: 'Times New Roman', serif;
+}
+
+.navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 6px;
+    font-family: 'Times New Roman', serif;
+}
+.navbar-nav  li a:hover {
+    color: #000000 !important;
+}
+
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+
+}

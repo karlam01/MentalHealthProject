@@ -1,0 +1,16 @@
+<%- include("header"); -%>
+  <h1>Services Provided</h1>
+
+  <form class="" action="/serviceInsert" method="post">
+    <div class="form-group">
+      <label>Service Name</label>
+      <input class="form-control" type="text" name="serviceName">
+      <label>Service Info</label>
+      <input class="form-control" type="text" name="serviceInfo">
+      <label>Contact Person</label>
+      <input class="form-control" type="text" name="contactPerson">
+      <label>Service Descriptor</label>
+      <input class="form-control" type="text" name="serviceDescriptor">
+    </div>
+    <button class="btn btn-dark" type="submit" name="button">Post</button>
+  </form>
