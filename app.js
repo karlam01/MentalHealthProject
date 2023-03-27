@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 app.use(session({
-  secret: "Our little secret.",
+  secret: "Secret",
   resave: false,
   saveUninitialized: false
 }));
@@ -50,9 +50,14 @@ const User = new mongoose.model("User", userSchema);
 
 passport.use(User.createStrategy());
 
-passport.serializeUser(User.serializeUser());
-
-passport.deserializeUser(User.deserializeUser());
+passport.serializeUser(function(user, done) {
+  done(null, user.id);
+});
+passport.deserializeUser(function(id, done) {
+  User.findById(id, function(err, user) {
+    done(err, user);
+  });
+});
 
 
 app.get("/login", function(req, res){
@@ -129,9 +134,7 @@ app.get("/", function(req, res){
 });
 
 
-app.get("/compose", function(req, res){
-  res.render("compose");
-})
+
 
 app.post("/compose", function(req, res){
   const post = new Post({
